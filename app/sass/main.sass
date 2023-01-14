@@ -91,6 +91,7 @@
 	background-image: url(../images/dist/header__bgd.png)
 	background-repeat: no-repeat
 	background-size: cover
+	background-position: center
 	padding: 250px 0 165px
 
 	+r(767)
@@ -98,6 +99,9 @@
 
 	+r(576)
 		padding: 170px 0 90px
+
+	&--page
+		padding: 160px 0 0
 
 	&__title
 		margin-bottom: 35px
@@ -153,7 +157,7 @@
 
 .about
 	padding: 50px 0 50px
-	background: #E5E5E5
+	background: #fff
 
 	&__container
 		+r(767)
@@ -291,7 +295,7 @@
 
 .case
 	padding: 50px 0
-	background: #e5e5e5
+	background: #fff
 
 	+r(1000)
 		padding: 25px 0
@@ -352,10 +356,21 @@
 		font-style: italic
 		line-height: 14px
 
-
 .project
 	padding: 50px 0
-	background: #e5e5e5
+	background: #fff
+
+	+r(767)
+		padding: 40px 0 100px
+
+	&__container
+		+r(767)
+			position: relative
+
+	&__title
+		color: $text
+		font-size: 33px
+		font-weight: 800
 
 	&__info
 		display: flex
@@ -363,58 +378,109 @@
 		margin-bottom: 25px
 		align-items: center
 
-		h2
-			color: $text
-			font-size: 33px
-			font-weight: 800
-
 		svg, path
 			transition: all .6s
 
-		a
-			display: flex
-			position: relative
-			align-items: center
-			text-decoration: none
+	&__more
+		display: flex
+		position: relative
+		align-items: center
+		text-decoration: none
+		color: #AB8B33
+		font-size: 16px
+		font-weight: 600
+
+		+r(767)
+			position: absolute
+			bottom: -50px
+			font-size: 14px
+
+		span
+			padding-right: 8px
+
+		&:hover
 			color: #AB8B33
-			font-size: 16px
-			font-weight: 600
-
-			span
-				padding-right: 8px
-
-			&:hover
-				color: #AB8B33
-
-				&::before
-					width: 100%
-
-				svg, path
-					fill: #AB8B33
-
-			&:active
-				color: #c2c2c3
-
-				&::before
-					width: 100%
-					background: #c2c2c3
-
-				svg, path
-					fill: #c2c2c3
 
 			&::before
-				background: #AB8B33
-				bottom: 0
-				content: ""
-				height: 1px
-				position: absolute
-				transition: all .6s
-				width: 0
+				width: 100%
+
+			svg, path
+				fill: #AB8B33
+
+		&:active
+			color: #c2c2c3
+
+			&::before
+				width: 100%
+				background: #c2c2c3
+
+			svg, path
+				fill: #c2c2c3
+
+		&::before
+			background: #AB8B33
+			bottom: 0
+			content: ""
+			height: 1px
+			position: absolute
+			transition: all .6s
+			width: 0
 
 	&__wrap
 		display: flex
 		flex-wrap: wrap
 		gap: 25px 20px
+
+		+r(1000)
+			gap: 25px 10px
+
+		+r(767)
+			gap: 25px
+
+		&_title
+				font-weight: 600
+				font-size: 16px
+				line-height: 19px
+				color: $text
+				margin-bottom: 8px
+
+				+r(1000)
+					font-weight: 800
+					font-size: 14px
+					line-height: 16px
+
+		&_subtitle
+				font-weight: 600
+				font-size: 16px
+				line-height: 19px
+
+				+r(1000)
+					font-size: 14px
+					line-height: 16px
+
+		&_img
+			display: block
+			position: relative
+			padding-top: 70%
+			width: 100%
+			margin-bottom: 8px
+			overflow: hidden
+			border-radius: 8px
+
+			+r(1000)
+				padding-top: 67%
+
+			+r(767)
+				padding-top: 60%
+
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				min-height: 100%
+				min-width: 100%
+				width: 100%
 
 		&_item
 			margin: 0 auto
@@ -424,15 +490,11 @@
 			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
 			border-radius: 8px
 
-			img
-				margin-bottom: 8px
+			+r(1000)
+				width: 49%
 
-			h2
-				font-weight: 600
-				font-size: 16px
-				line-height: 19px
-				color: $text
-				margin-bottom: 8px
+			+r(767)
+				width: 100%
 
 			ul
 				display: flex
@@ -444,12 +506,13 @@
 					position: relative
 					padding-left: 20px
 
-					h3
-						font-weight: 600
-						font-size: 16px
-
 					p
 						font-size: 16px
+						line-height: 19px
+
+						+r(1000)
+							font-size: 14px
+							line-height: 16px
 
 						&:hover
 							color: #AB8B33
@@ -475,12 +538,30 @@
 
 	&__wrap
 		display: flex
+		flex-wrap: wrap
 		gap: 5%
+
+		+r(1000)
+			gap: 25px
 
 		&_block
 			width: 29%
 
+			+r(1000)
+				display: flex
+				gap: 2%
+				width: 100%
+
+			+r(767)
+				flex-wrap: wrap
+
 		&_contact
+			+r(1000)
+				width: 48%
+
+			+r(767)
+				width: 100%
+
 			ul
 				margin-bottom: 40px
 
@@ -512,6 +593,11 @@
 						color: #c2c2c3
 
 		&_form
+			+r(1000)
+				width: 48%
+
+			+r(767)
+				width: 100%
 
 			input, button
 				width: 100%
@@ -536,6 +622,20 @@
 			width: 66%
 			border-radius: 8px
 
+			+r(1000)
+				width: 100%
+
+			iframe
+				width: 100%
+				height: 470px
+				border-radius: 8px
+
+				+r(1000)
+					height: 355px
+
+				+r(767)
+					height: 245px
+
 .footer
 	display: flex
 	padding: 25px 0
@@ -547,6 +647,11 @@
 		font-weight: 400
 		font-size: 12px
 		line-height: 14px
+
+		+r(767)
+			flex-direction: column
+			align-items: center
+			gap: 7px
 
 		a
 			color: #000
