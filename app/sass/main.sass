@@ -103,6 +103,12 @@
 	&--page
 		padding: 160px 0 0
 
+		+r(1000)
+			padding-top: 136px
+
+		+r(767)
+			padding-top: 115px
+
 	&__title
 		margin-bottom: 35px
 		font-size: 36px
@@ -230,13 +236,17 @@
 		display: flex
 		gap: 2%
 
+		&--page
+			+r(567)
+				flex-wrap: wrap
+				gap: 50px
+
 		p
 			font-size: 16px
 			line-height: 1.18
 
 			&:last-child
 				margin-bottom: 0
-
 
 		li
 			position: relative
@@ -272,6 +282,13 @@
 			+r(767)
 				width: 100%
 
+			&--page
+				+r(767)
+					width: 51%
+
+				+r(567)
+					width: 100%
+
 			p
 				margin-bottom: 20px
 				color: $text
@@ -288,6 +305,14 @@
 
 			+r(767)
 				display: none
+
+			&--page
+				+r(767)
+					display: block
+					width: 47%
+
+				+r(567)
+					width: 100%
 
 			p
 				margin-bottom: 7px
@@ -324,6 +349,7 @@
 			background: #fff
 			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
 			border-radius: 8px
+			text-decoration: none
 
 			+r(1000)
 				width: 32%
@@ -664,3 +690,4 @@
 
 		span
 			color: #000
+
