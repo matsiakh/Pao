@@ -351,6 +351,12 @@
 			border-radius: 8px
 			text-decoration: none
 
+			&:hover
+				transform: scale(.97)
+
+			&:active
+				transform: scale(.99)
+
 			+r(1000)
 				width: 32%
 
@@ -464,25 +470,25 @@
 			gap: 25px
 
 		&_title
-				font-weight: 600
-				font-size: 16px
-				line-height: 19px
-				color: $text
-				margin-bottom: 8px
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
+			color: $text
+			margin-bottom: 8px
 
-				+r(1000)
-					font-weight: 800
-					font-size: 14px
-					line-height: 16px
+			+r(1000)
+				font-weight: 800
+				font-size: 14px
+				line-height: 16px
 
 		&_subtitle
-				font-weight: 600
-				font-size: 16px
-				line-height: 19px
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
 
-				+r(1000)
-					font-size: 14px
-					line-height: 16px
+			+r(1000)
+				font-size: 14px
+				line-height: 16px
 
 		&_img
 			display: block
@@ -492,6 +498,12 @@
 			margin-bottom: 8px
 			overflow: hidden
 			border-radius: 8px
+
+			&:hover
+				transform: scale(.97)
+
+			&:active
+				transform: scale(.99)
 
 			+r(1000)
 				padding-top: 67%
@@ -528,27 +540,21 @@
 				gap: 8px 60px
 				line-height: 15px
 
-				li
-					position: relative
-					padding-left: 20px
+			li
+				position: relative
+				padding-left: 20px
 
-					p
-						font-size: 16px
-						line-height: 19px
+			p
+				font-size: 16px
+				line-height: 19px
 
-						+r(1000)
-							font-size: 14px
-							line-height: 16px
+				+r(1000)
+					font-size: 14px
+					line-height: 16px
 
-						&:hover
-							color: #AB8B33
-
-						&:active
-							color: #c2c2c3
-
-					svg
-						position: absolute
-						left: 0
+			svg
+				position: absolute
+				left: 0
 
 .info
 	padding: 50px 0
@@ -665,7 +671,7 @@
 .footer
 	display: flex
 	padding: 25px 0
-	background: #E5E5E5
+	background: #fff
 
 	&__info
 		display: flex
@@ -695,8 +701,14 @@
 	padding: 50px 0
 	background: #fff
 
+	+r(1000)
+		padding: 25px 0 50px
+
+	+r(767)
+		padding: 25px 0
+
 	&__title
-		color: #111
+		color: $text
 		font-size: 36px
 		font-weight: 800
 		line-height: 42px
@@ -704,15 +716,199 @@
 
 	&__subtitle
 		margin-bottom: 20px
+		font-weight: 500
+		font-size: 24px
+		line-height: 28px
+		color: $text
 
-	&__item
+	&__list
 		display: flex
 		flex-wrap: wrap
 		border-radius: 8px
+		gap: 25px
+		margin-bottom: 25px
+
+		+r(1000)
+			gap: 15px 2.5%
+
+		+r(767)
+			gap: 15px 2.6%
+
+		+r(480)
+			gap: 15px 3.5%
+
+		&:last-child
+			margin-bottom: 0
 
 		&_pdf
 			border-top: 25px solid #DA2222 
-			padding: 35px 40px
+			padding: 40px 10px 50px
+			width: 14.5%
 			background: #FFFFFF
 			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
 			border-radius: 8px
+			font-weight: 700
+			font-size: 24px
+			line-height: 28px
+			text-decoration: none
+			color: #000
+			text-align: center
+
+			+r(1000)
+				width: 18%
+
+			+r(767)
+				width: 23%
+
+			+r(480)
+				width: 31%
+
+
+			&:hover
+				transform: scale(.98)
+				color: #AB8B33
+
+			&:active
+				transform: scale(1.02)
+				color: #c2c2c3
+
+.news
+	padding: 50px 0
+	background: #fff
+
+	&__title
+		color: $text
+		font-size: 33px
+		font-weight: 800
+
+	&__info
+		margin-bottom: 25px
+
+	&__subtitle
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+
+		+r(1000)
+			font-size: 14px
+			line-height: 16px
+
+	&__wrap
+		width: 100%
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		gap: 15px
+
+	&__item
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		gap: 4%
+		margin: 0 auto
+		padding: 20px
+		background: #fff
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
+		border-radius: 8px
+		color: $text
+		text-decoration: none
+		+transition
+
+		+r(1000)
+			width: 48%
+			gap: 10px
+
+		+r(767)
+			width: 100%
+			gap: 4%
+
+		&:hover
+			color: $text
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4)
+
+			img
+				transform: scale(1.02)
+
+		&:active
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4)
+			img
+				transform: scale(1.02)
+
+		ul
+			display: flex
+			flex-wrap: wrap
+			gap: 8px 60px
+			line-height: 15px
+
+		li
+			position: relative
+			padding-left: 20px
+
+		p
+			font-size: 16px
+			line-height: 19px
+
+			+r(1000)
+				font-size: 14px
+				line-height: 16px
+
+		svg
+			position: absolute
+			left: 0
+
+	&__img
+		width: 46%
+		overflow: hidden
+		border-radius: 8px
+
+		+r(1000)
+			width: 100%
+
+		img
+			width: 100%
+			+transition
+
+	&__content
+		width: 50%
+
+		+r(1000)
+			width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
