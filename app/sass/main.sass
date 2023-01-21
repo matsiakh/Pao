@@ -80,6 +80,9 @@
 		+r(767)
 			width: 50px
 
+		&::before
+			display: none
+
 		img
 			width: 100%
 
@@ -909,21 +912,18 @@
 
 	&__director
 		text-align: center
-		width: 38%
+		width: 31%
 
 		+r(767)
 			display: none
 
-	&__img
-		display: block
-
 	&__welcome
 		position: relative
-		padding: 20px 20px 70px
+		padding: 20px
 		background: #FFFFFF
 		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
 		border-radius: 8px
-		width: 60%
+		width: 67%
 		color: $text
 
 		+r(1000)
@@ -944,15 +944,9 @@
 		font-size: 16px
 		line-height: 19px
 
-		&:last-child
-			font-weight: 600
-			position: absolute
-			transform: translate(0,15px)
-
 	ul
 		display: flex
 		flex-wrap: wrap
-		align-items: center
 		gap: 15px 6%
 
 		+r(1000)
@@ -991,28 +985,23 @@
 		font-size: 36px
 		line-height: 42px
 
-	&__form
+	&__wrap
 		display: flex
 		position: relative
 		justify-content: space-between
 		background: #fff
 		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
 		border-radius: 8px
-		padding: 45px 45px 35px
+		padding: 30px 45px 35px
 
 		+r(567)
 			padding: 45px 20px 25px
 
-		input, button
+	&__form
+		width: 67%
+
+		+r(1000)
 			width: 100%
-			font-size: 18px
-			line-height: 21px
-			margin-bottom: 25px
-			background: transparent
-			border: none
-			border-bottom: 1px solid #686868
-			color: #686868
-			text-align: left
 
 		&_first
 			display: flex
@@ -1022,11 +1011,25 @@
 			+r(567)
 				flex-wrap: wrap
 
+		input, button
+			width: 100%
+			font-size: 18px
+			line-height: 50px
+			margin-bottom: 15px
+			background: transparent
+			border: none
+			border-bottom: 1px solid #686868
+			color: #686868
+			text-align: left
+
+		button
+			margin-bottom: 0
+
 	&__logo
-		position: absolute
-		left: 85%
-		top: 50%
-		transform: translate(-50%, -50%)
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 27%
 
 		+r(1000)
 			display: none
