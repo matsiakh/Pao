@@ -477,7 +477,7 @@
 			font-size: 16px
 			line-height: 19px
 			color: $text
-			margin-bottom: 8px
+			margin-bottom: 5px
 
 			+r(1000)
 				font-weight: 800
@@ -525,7 +525,7 @@
 
 		&_item
 			margin: 0 auto
-			padding: 20px
+			padding: 20px 20px 10px
 			width: 48%
 			background: #fff
 			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
@@ -898,7 +898,7 @@
 
 	&__title
 		font-weight: 800
-		font-size: 36px
+		font-size: 33px
 		line-height: 42px
 		color: $text
 		margin-bottom: 25px
@@ -907,8 +907,8 @@
 		display: flex
 		gap: 2%
 
-		+r(1000)
-			gap: 5%
+	&__img
+		margin-bottom: 10px
 
 	&__director
 		text-align: center
@@ -917,37 +917,48 @@
 		+r(767)
 			display: none
 
+		img
+			width: 100%
+
+	&__subtitle
+		font-size: 16px
+		margin-bottom: 5px
+
 	&__welcome
 		position: relative
-		padding: 20px
+		padding: 20px 20px 0
 		background: #FFFFFF
 		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
 		border-radius: 8px
 		width: 67%
 		color: $text
 
-		+r(1000)
-			width: 57%
-
 		+r(767)
-			padding: 20px 10px 70px
+			padding: 20px 10px
 			width: 100%
 
 		&_subtitle
-			margin-bottom: 20px
+			margin-bottom: 10px
 			font-weight: 600
 			font-size: 16px
-			line-height: 19px
+			line-height: 40px
+
+			+r(1000)
+				line-height: 25px
 
 	p
-		margin-bottom: 15px
+		margin-bottom: 22px
 		font-size: 16px
-		line-height: 19px
+		line-height: 20px
+
+		&:last-child
+			margin-bottom: 0
 
 	ul
 		display: flex
 		flex-wrap: wrap
-		gap: 15px 6%
+		gap: 10px 6%
+		margin-bottom: 25px
 
 		+r(1000)
 			display: none
@@ -955,9 +966,10 @@
 	li
 		width: 47%
 		color: #686868
-		margin-bottom: 7px
 		padding-left: 15px
 		position: relative
+		font-size: 17px
+		line-height: 17px
 
 		&::before
 			content: ""
@@ -975,6 +987,7 @@
 		width: 100%
 		color: #111
 		margin-bottom: 8px
+		font-size: 17px
 
 .message
 	padding: 50px 0
