@@ -145,8 +145,30 @@
 			margin-bottom: 15px
 			justify-content: center
 
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			border: 1px solid #fff
+			border-radius: 4px
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			animation: pulse-one 4s linear infinite 2s
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			border: 1px solid #fff
+			border-radius: 4px
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			animation: pulse-one 4s linear infinite
+
 		&:hover
-			color: $text
+			color: #fff
 			background-color: #AB8B33
 
 		&:active
