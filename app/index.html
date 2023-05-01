@@ -47,7 +47,7 @@
 				проекты, грамотно управляя стоимостью и <br>сроками
 			</h1>
 
-			<a href="##" class="hero__btn">Связаться с нами</a>
+			<a href="##" class="hero__btn modal__add">Связаться с нами</a>
 
 			<a href="##" class="hero__btn hero__btn--bg">+7 (495) 234-55-55</a>
 
@@ -547,6 +547,51 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal" id="modal__add">
+		<form action="#" class="modal__form form" method="POST">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3 class="form__title">Связаться с нами</h3>
+
+			<input type="hidden" name="subject" value="Связаться с нами">
+
+			<div class="form__item">
+				<input id="formName2" type="text" name="name" placeholder=" " class="form__input _req">
+				<label for="formName2" class="form__label">Имя*</label>
+			</div>
+			<div class="form__item">
+				
+				<input id="formPhone2" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+				<label for="formPhone2" class="form__label">Телефон*</label>
+			</div>
+
+			<div class="form__item">
+				<label for="formMail2">Почта*</label>
+				<input id="formMail2" type="email" name="mail" placeholder="Почта" class="form__input _req">
+			</div>
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal" id="modal__thanks">
+		<div class="modal__form">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	</div>
 
 </body>
 </html>
