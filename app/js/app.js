@@ -206,6 +206,8 @@ document.addEventListener("DOMContentLoaded", function() {
 						} else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
 							formAddErrorCheck(input);
 							error++;
+						} else if (input.classList.contains('_phone')) {
+							formAddErrorPhone(input);
 						} else {
 							if (input.value === '') {
 								formAddError(input);
@@ -291,6 +293,16 @@ document.addEventListener("DOMContentLoaded", function() {
 					input.classList.add('_error');
 				}
 
+				function formAddErrorPhone(input) {
+					let div = document.createElement('div');
+					div.classList.add("form__error");
+					div.innerHTML = "Введите свой телефон";
+
+					input.parentElement.append(div);
+					input.parentElement.classList.add('_error');
+					input.classList.add('_error');
+				}
+
 				function formAddErrorCheck(input) {
 					let div = document.createElement('div');
 					div.classList.add("form__error");
@@ -302,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 
 				function emailTest(input) {
-					return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/. test(input.value);
+					return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*.\[a-z]{2,6}$/. test(input.value);
 				}
 
 			});
