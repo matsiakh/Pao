@@ -759,25 +759,6 @@
 			+r(767)
 				width: 100%
 
-			input, button
-				width: 100%
-				line-height: 25px
-				margin-bottom: 15px
-				background: transparent
-				border: none
-				border-bottom: 1px solid #fff
-				color: #fff
-				text-align: left
-
-				&:last-child
-					margin-bottom: 0
-
-			button
-				color: #686868
-
-				&:hover
-					color: #fff
-
 		&_maps
 			width: 66%
 			border-radius: 8px
@@ -795,6 +776,40 @@
 
 				+r(767)
 					height: 245px
+
+	&__form
+		width: 100% !important
+
+		.form__input, button
+			width: 100%
+			line-height: 25px
+			height: 25px
+			margin-bottom: 15px
+			background: transparent
+			border: none
+			border-bottom: 1px solid #fff
+			color: #fff
+			text-align: left
+
+			&:last-child
+				margin-bottom: 0
+
+		button
+			color: #686868
+
+			&:hover
+				color: #fff
+
+		.form__label
+			background: $text
+			transform: translate(0, -17px)
+
+		input:not(:placeholder-shown) + label,
+		input:focus + label
+			transform: translate(0, -35px)
+
+		.form__error
+			bottom: -5px
 
 .footer
 	display: flex
@@ -971,6 +986,9 @@
 		li
 			position: relative
 			padding-left: 20px
+			
+		img
+			+transition
 
 		p
 			font-size: 16px
@@ -1184,9 +1202,18 @@
 		&_text
 			width: 48%
 
+			+r(767)
+				width: 100%
+
 		&_img
 			height: 350px
 			padding: 0
+
+			+r(767)
+				height: 250px
+
+			+r(576)
+				height: 200px
 
 .modal
 	display: flex
@@ -1260,7 +1287,7 @@
 		background-color: #fff
 		box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
 		width: 100%
-		max-width: 500px
+		max-width: 450px
 		height: auto
 		padding: 20px
 		border: 1px solid #8d8d8e
@@ -1288,7 +1315,6 @@
 .form
 	@extend .message__form
 	position: relative
-	max-width: 450px
 	+pseudo
 
 	&::after
@@ -1313,6 +1339,7 @@
 	&__item
 		position: relative
 		margin-bottom: 25px
+		width: 100%
 
 	&__label
 		position: absolute
